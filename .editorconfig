@@ -1,0 +1,20 @@
+root = true
+
+
+[*]
+
+# Coding style
+indent_style = space
+indent_size = 2
+
+# Encoding and line endings
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+
+[*.md]
+
+# Allows line breaks (2 EOL spaces)
+trim_trailing_whitespace = false

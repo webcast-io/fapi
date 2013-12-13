@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "0.10"
+env:
+  global:
+    - NODE_ENV="test"
+    - CI_NAME="travis-pro"
+  matrix:
+    - TEST_CMD="lint"
+cache:
+  directories:
+    - node_modules
+script:
+  - ./node_modules/.bin/grunt travis

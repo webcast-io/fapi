@@ -25,5 +25,9 @@
   "homepage": "https://github.com/webcast-io/fapi",
   "dependencies": {
     "commander": "~2.1.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2"
   }
 }

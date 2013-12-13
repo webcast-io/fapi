@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+'use strict';
 
 var fappiGod = require('../lib/fapi');
 
@@ -20,7 +21,7 @@ fapi.server.on('request', function(request) {
   var initTime = new Date();
   request.once('response', function(response) {
     var timeTaken = (new Date()).valueOf() - initTime.valueOf();
-    console.log(request.method + '/ROUTE ' + response.statusCode + ' ' + timeTaken);
+    console.log(request.method + ' ' + req.url + ' ' + response.statusCode + ' ' + timeTaken);
   });
 });
 
