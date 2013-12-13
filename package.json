@@ -1,0 +1,29 @@
+{
+  "name": "fapi",
+  "version": "0.0.0",
+  "description": "Front-end webserver providing a file structured API",
+  "main": "lib/fapi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:webcast-io/fapi.git"
+  },
+  "keywords": [
+    "web",
+    "server",
+    "front",
+    "dev",
+    "api"
+  ],
+  "author": "Ben Evans <ben@bensbit.co.uk> (http://bensbit.co.uk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webcast-io/fapi/issues"
+  },
+  "homepage": "https://github.com/webcast-io/fapi",
+  "dependencies": {
+    "commander": "~2.1.0"
+  }
+}

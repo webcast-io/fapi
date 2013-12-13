@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+var fappiGod = require('../lib/fapi');
+
+
+var program = require('commander');
+
+program
+  .version(require(__dirname + '/../package.json').version)
+  .option('-p, --port [port]', 'Port the webserver should listen on', '8080')
+  .option('-b, --public-path [publicPath]', 'Path to static/public files', './public')
+  .option('-a, --api-path [apiPath', 'Path to the base directory of API files', './api')
+  .option('-c, --api-route [apiRoute]', 'Route api requests should follow', '/')
+  .option('-d, --debug [debug]', 'Route api requests should follow', false)
+  .parse(process.argv);
+
+var fapi = fappiGod(program);
+
+fapi.server.on('request', function(request) {
+  var initTime = new Date();
+  request.once('response', function(response) {
+    var timeTaken = (new Date()).valueOf() - initTime.valueOf();
+    console.log(request.method + '/ROUTE ' + response.statusCode + ' ' + timeTaken);
+  });
+});
+
+fapi.server.listen(program.port, function() {
+  console.log('Fapi is now listening on port ' + program.port);
+});
