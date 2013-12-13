@@ -1,0 +1,4 @@
+
+describe('Fapi CLI', function() {
+
+});
