@@ -1,6 +1,6 @@
 'use strict';
 
-var Fapi   = require('../lib/fapi');
+var libFapi   = require('../lib/fapi');
 var assert = require('assert');
 
 describe('Fapi Lib', function() {
@@ -8,8 +8,8 @@ describe('Fapi Lib', function() {
 
   describe('createInstance()', function() {
     it('should return a Fapi instance', function() {
-      fapi = Fapi();
-      assert.ok(fapi instanceof Fapi.Fapi);
+      fapi = libFapi();
+      assert.ok(fapi instanceof libFapi.Fapi);
     });
   });
 
