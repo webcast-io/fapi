@@ -1,14 +1,22 @@
 'use strict';
 
+var Fapi   = require('../lib/fapi');
+var assert = require('assert');
+
 describe('Fapi Lib', function() {
+  var fapi;
 
   describe('createInstance()', function() {
-    it('should return a Fapi instance');
+    it('should return a Fapi instance', function() {
+      fapi = Fapi();
+      assert.ok(fapi instanceof Fapi.Fapi);
+    });
   });
 
   describe('Fapi.handleRequest()', function() {
     describe('on a request that should resolve to an api response', function() {
       it('should return the api file');
+      // request.get(fapi, '/users') === ['bencevans']
       it('should return an api file when at /');
     });
 
