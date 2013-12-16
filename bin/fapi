@@ -12,7 +12,7 @@ program
   .option('-b, --public-path [publicPath]', 'Path to static/public files', './public')
   .option('-a, --api-path [apiPath', 'Path to the base directory of API files', './api')
   .option('-c, --api-route [apiRoute]', 'Route api requests should follow', '/')
-  .option('-d, --debug [debug]', 'Route api requests should follow', false)
+  .option('-d, --debug [debug]', 'Logs more to console', false)
   .parse(process.argv);
 
 var fapi = fappiGod(program);
