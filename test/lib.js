@@ -31,7 +31,6 @@ describe('Fapi Lib', function() {
           url: 'http://localhost:' + config.port + '/users',
           json: true
         }, function(err, res, body) {
-          console.log(body);
           assert.equal(err, null);
           assert.deepEqual(body, ['bencevans']);
           done();
@@ -65,15 +64,6 @@ describe('Fapi Lib', function() {
         }, function(err, res, body) {
           assert.equal(err, null);
           assert.deepEqual(body, 'Full English');
-          done();
-        });
-      });
-      it('should return an static file when at /', function(done) {
-        request({
-          url: 'http://localhost:' + config.port + '/dinner',
-        }, function(err, res, body) {
-          assert.equal(err, null);
-          assert.deepEqual(body, 'Nom');
           done();
         });
       });
