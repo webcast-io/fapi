@@ -4,7 +4,9 @@
   "description": "Front-end webserver providing a file structured API",
   "main": "lib/fapi.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/grunt",
+    "cover": "./node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -- -u exports -R spec test/*.js",
+    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -- -u exports --report lcovonly -- -R spec -- test/*.js && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,11 @@
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-jshint": "~0.7.2",
-    "grunt-cli": "~0.1.11"
+    "grunt-cli": "~0.1.11",
+    "grunt-mocha-test": "~0.8.1",
+    "mocha": "~1.15.1",
+    "istanbul": "~0.1.46",
+    "coveralls": "~2.6.0",
+    "request": "~2.30.0"
   }
 }

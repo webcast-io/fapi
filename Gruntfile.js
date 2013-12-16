@@ -20,13 +20,25 @@ module.exports = function (grunt) {
         '**/*.js'
       ]
 
+    },
+
+    mochaTest: {
+      test: {
+        options: {
+          reporter: 'dot'
+        },
+        src: ['test/**/*.js']
+      }
     }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-mocha-test');
 
+  grunt.registerTask('mocha', 'mochaTest');
   grunt.registerTask('lint', 'jshint:all');
-  grunt.registerTask('default', 'lint');
+  grunt.registerTask('default', 'lint', 'mochaTest');
 
   if(process.env.TEST_CMD) {
     grunt.registerTask('travis', process.env.TEST_CMD);
