@@ -13,3 +13,5 @@ cache:
     - node_modules
 script:
   - ./node_modules/.bin/grunt travis
+after_script:
+  - if [ "$TEST_CMD" = 'mocha' ]; then npm run coveralls; fi
