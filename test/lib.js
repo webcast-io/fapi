@@ -32,6 +32,7 @@ describe('Fapi Lib', function() {
           json: true
         }, function(err, res, body) {
           assert.equal(err, null);
+          assert.equal(res.headers['content-type'], 'application/json');
           assert.deepEqual(body, ['bencevans']);
           done();
         });
@@ -42,6 +43,7 @@ describe('Fapi Lib', function() {
           json: true
         }, function(err, res, body) {
           assert.equal(err, null);
+          assert.equal(res.headers['content-type'], 'application/json');
           assert.deepEqual(body, 'Hello World');
           done();
         });
@@ -54,6 +56,7 @@ describe('Fapi Lib', function() {
           url: 'http://localhost:' + config.port + '/breakfast.html',
         }, function(err, res, body) {
           assert.equal(err, null);
+          assert.equal(res.headers['content-type'], 'text/html');
           assert.deepEqual(body, 'Full English');
           done();
         });
@@ -63,6 +66,7 @@ describe('Fapi Lib', function() {
           url: 'http://localhost:' + config.port + '/breakfast',
         }, function(err, res, body) {
           assert.equal(err, null);
+          assert.equal(res.headers['content-type'], 'text/html');
           assert.deepEqual(body, 'Full English');
           done();
         });
