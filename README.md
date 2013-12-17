@@ -3,7 +3,8 @@ fapi
 
 A webserver for front-end development providing a file structured API
 
-[![Build Status](https://magnum.travis-ci.com/webcast-io/fapi.png?token=priiGCqy8Ukbwz3kBC5x&branch=feature/tests)](https://magnum.travis-ci.com/webcast-io/fapi)
+[![Build Status](https://travis-ci.org/webcast-io/fapi.png?branch=master)](https://travis-ci.org/webcast-io/fapi)
+[![Coverage Status](https://coveralls.io/repos/webcast-io/fapi/badge.png?branch=master)](https://coveralls.io/r/webcast-io/fapi?branch=master)
 
 ```
   Usage: fapi [options]
