@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git@github.com:webcast-io/fapi.git"
   },
+  "bin":"bin/fapi",
   "keywords": [
     "web",
     "server",
