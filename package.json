@@ -1,6 +1,6 @@
 {
   "name": "fapi",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Front-end webserver providing a file structured API",
   "main": "lib/fapi.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git@github.com:webcast-io/fapi.git"
   },
-  "bin":"bin/fapi",
+  "bin": "bin/fapi",
   "keywords": [
     "web",
     "server",
