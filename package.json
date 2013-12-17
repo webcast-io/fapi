@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/webcast-io/fapi",
   "dependencies": {
-    "commander": "~2.1.0"
+    "commander": "~2.1.0",
+    "mime": "~1.2.11"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
