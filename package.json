@@ -1,6 +1,6 @@
 {
   "name": "fapi",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Front-end webserver providing a file structured API",
   "main": "lib/fapi.js",
   "scripts": {
