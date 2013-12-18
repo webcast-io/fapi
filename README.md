@@ -35,11 +35,15 @@ Example Directory Structure:
 
 Would provide the following given requests:
 
-* GET /users = /api/GET/users.json
-* GET /users.json = /api/GET/users.json
-* POST /user = /api/POST/user.json
-* {METHOD} /{apiRoute}/{PATH}[.json] = /{apiPath}/{METHOD}/{PATH}.json
-
-* GET / = /public/index.html
-* GET /index.html = /public/index.html
-* GET /{PATH} = /{publicPath}/{PATH}
+    --------------------------------------------------------------------------
+    | METHOD   | URL PATH                  | FILE PATH                       |
+    --------------------------------------------------------------------------
+    | GET      | /                         | /public/index.html              |
+    | GET      | /users                    | /api/GET/users.json             |
+    | GET      | /users.json               | /api/GET/users.json             |
+    | POST     | /user                     | /api/POST/user.json             |
+    | {METHOD} | /{apiRoute}/{PATH}[.json] | /{apiPath}/{METHOD}/{PATH}.json |
+    | GET      | /                         | /public/index.html              |
+    | GET      | /index.html               | /public/index.html              |
+    | GET      | /{PATH}                   | /{publicPath}/{PATH}            |
+    --------------------------------------------------------------------------
