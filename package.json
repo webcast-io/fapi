@@ -28,7 +28,8 @@
   "homepage": "https://github.com/webcast-io/fapi",
   "dependencies": {
     "commander": "~2.1.0",
-    "mime": "~1.2.11"
+    "mime": "~1.2.11",
+    "jade": "0.35.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
